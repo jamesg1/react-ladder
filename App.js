@@ -64,7 +64,7 @@ var Table = function Table(_ref2) {
 
   return React.createElement(
     "table",
-    { className: "ladder-table", "data-conference": "0" },
+    { className: "ladder", "data-conference": "0" },
     React.createElement(
       "thead",
       null,
@@ -73,52 +73,27 @@ var Table = function Table(_ref2) {
         null,
         React.createElement(
           "th",
-          { className: "ladder-table__position-heading" },
+          { scope: "col" },
           "Pos"
         ),
         React.createElement(
           "th",
-          { className: "text--left ladder-table__club-heading" },
+          { scope: "col" },
           "Club"
         ),
         React.createElement(
           "th",
-          null,
-          "P"
+          { scope: "col" },
+          "Pl"
         ),
         React.createElement(
           "th",
-          null,
-          "W"
-        ),
-        React.createElement(
-          "th",
-          null,
-          "D"
-        ),
-        React.createElement(
-          "th",
-          null,
-          "L"
-        ),
-        React.createElement(
-          "th",
-          null,
-          "GF"
-        ),
-        React.createElement(
-          "th",
-          null,
-          "GA"
-        ),
-        React.createElement(
-          "th",
-          null,
+          { scope: "col" },
           "GD"
         ),
         React.createElement(
           "th",
-          { className: "ladder-table__points-heading" },
+          { scope: "col" },
           "Pts"
         )
       )
@@ -129,15 +104,15 @@ var Table = function Table(_ref2) {
       data.map(function (item) {
         return React.createElement(
           "tr",
-          { key: item.rank, className: "ladder-table__item" },
+          { key: item.rank, className: "ladder__team team" },
           React.createElement(
             "td",
-            { className: "ladder-table__position" },
+            { className: "team__pos" },
             item.rank
           ),
           React.createElement(
             "td",
-            { className: "ladder-table__name text--left" },
+            { className: "team__name" },
             React.createElement(
               "span",
               null,
@@ -146,42 +121,17 @@ var Table = function Table(_ref2) {
           ),
           React.createElement(
             "td",
-            { className: "ladder-table__played" },
+            { className: "team__played" },
             item.matches
           ),
           React.createElement(
             "td",
-            { className: "ladder-table__won" },
-            item.win
-          ),
-          React.createElement(
-            "td",
-            { className: "ladder-table__draw" },
-            item.draw
-          ),
-          React.createElement(
-            "td",
-            { className: "ladder-table__lose" },
-            item.lost
-          ),
-          React.createElement(
-            "td",
-            { className: "ladder-table__gf" },
-            item.score
-          ),
-          React.createElement(
-            "td",
-            { className: "ladder-table__ga" },
-            item.score_against
-          ),
-          React.createElement(
-            "td",
-            { className: "ladder-table__ga" },
+            { className: "team__gd" },
             item.difference
           ),
           React.createElement(
             "td",
-            { className: "ladder-table__points" },
+            { className: "team__points" },
             item.points
           )
         );
