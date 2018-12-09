@@ -48,6 +48,10 @@ table tbody tr:nth-child(2n) td {
 
 /* Custom Table styling */
 
+tr.team td {
+  vertical-align: middle;
+}
+
 .team__name {
   display: flex;
 }
@@ -55,12 +59,15 @@ table tbody tr:nth-child(2n) td {
 .team__name--center {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.team__logo {
-  padding: 10px 10px 10px 0;
-  width: 40px;
+img.team__logo {
+  margin: 10px 10px 10px 0;
+  width: 30px;
   height: 100%;
+  align-self: flex-start;
 }
 
 .team__points {
