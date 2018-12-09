@@ -1,0 +1,68 @@
+body {
+  color: #686868;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.618;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+table {
+  /* width: 100%;
+max-width: 100%; */
+  margin-bottom: 2.2906835em;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+table caption {
+  padding: 1.41575em;
+  font-weight: 600;
+}
+
+table th {
+  background: #f2f2f2;
+  font-weight: 500;
+}
+
+table td,
+table th {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+table thead th {
+  vertical-align: middle;
+}
+
+table tbody td {
+  background: #fafafa;
+}
+
+table tbody tr:nth-child(2n) td {
+  background: #f7f7f7;
+}
+
+/* Custom Table styling */
+
+.team__name {
+  display: flex;
+}
+
+.team__name--center {
+  display: flex;
+  align-items: center;
+}
+
+.team__logo {
+  padding: 10px 10px 10px 0;
+  width: 40px;
+  height: 100%;
+}
+
+.team__points {
+  font-weight: bold;
+}

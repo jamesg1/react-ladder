@@ -48,11 +48,7 @@ var App = function (_React$Component) {
           loading = _state.loading,
           data = _state.data;
 
-      return React.createElement(
-        "div",
-        null,
-        loading ? "Loading" : React.createElement(Table, { data: data })
-      );
+      return loading ? "" : React.createElement(Table, { data: data });
     }
   }]);
 
@@ -69,33 +65,29 @@ var Table = function Table(_ref2) {
       "thead",
       null,
       React.createElement(
-        "tr",
-        null,
-        React.createElement(
-          "th",
-          { scope: "col" },
-          "Pos"
-        ),
-        React.createElement(
-          "th",
-          { scope: "col" },
-          "Club"
-        ),
-        React.createElement(
-          "th",
-          { scope: "col" },
-          "Pl"
-        ),
-        React.createElement(
-          "th",
-          { scope: "col" },
-          "GD"
-        ),
-        React.createElement(
-          "th",
-          { scope: "col" },
-          "Pts"
-        )
+        "th",
+        { scope: "col" },
+        "Pos"
+      ),
+      React.createElement(
+        "th",
+        { scope: "col" },
+        "Club"
+      ),
+      React.createElement(
+        "th",
+        { scope: "col" },
+        "Pl"
+      ),
+      React.createElement(
+        "th",
+        { scope: "col" },
+        "GD"
+      ),
+      React.createElement(
+        "th",
+        { scope: "col" },
+        "Pts"
       )
     ),
     React.createElement(
@@ -113,9 +105,13 @@ var Table = function Table(_ref2) {
           React.createElement(
             "td",
             { className: "team__name" },
+            React.createElement("img", {
+              className: "team__logo",
+              src: "/wp-content/plugins/ladder/img/" + item.team.id + ".png"
+            }),
             React.createElement(
               "span",
-              null,
+              { className: "team__name--center" },
               item.team.name
             )
           ),
